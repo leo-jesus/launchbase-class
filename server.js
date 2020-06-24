@@ -8,8 +8,9 @@ server.use(express.static('public'))
 server.set("view engine", "njk")
 
 nunjucks.configure("views", {
-    express: server, 
-    autoescape:false
+    express: server,
+    autoescape: false,
+    noCache: true
 })
 
 server.get("/", (req, res) => {
@@ -29,6 +30,22 @@ server.get("/", (req, res) => {
 })
 server.get("/portfolio", (req, res) => {
     return res.render("portfolio", { items: videos })
+})
+
+server.get("/video", (req, res) => {
+    const id = req.query.id
+    const video = videos.find((video) => {
+       return video.id == id
+    })
+
+    if (!video) {
+        return res.send("video not found!")
+    }
+
+    return res.render("video", { item: video })
+
+    res.send(id)
+
 })
 server.listen(5000, () => {
     console.log("server is running")

@@ -95,9 +95,10 @@ header {
 }
 
 .card{
+ cursor: pointer;
     background-color: var(--color-rocket);
 }
-.card:hover{
+.cards .card:hover{
     transform: scale(1.070);
     transition: 0.5s ease;
 }
@@ -163,3 +164,36 @@ iframe{
     position: absolute;
     top: 5%;
 } 
+
+
+/* ===FEATURED=== */
+.featured-wrapper.card__image-container{
+    position: relative;
+}
+.featured{
+    position: absolute;
+    background: rgb(248, 244, 181);
+    color: #111;
+    padding: 2px 8px;
+    right: 5px;
+    border-radius: 16px;
+    top: -10px;
+}
+
+.video{
+    margin: 0 auto ;
+    max-width: 800px;
+    max-width: 550px;
+}
+
+.card__video-container{
+    position: relative;
+    padding-top: 55%;
+}
+
+.card__video-container iframe{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
