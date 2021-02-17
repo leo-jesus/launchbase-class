@@ -18,7 +18,7 @@ server.get("/", (req, res) => {
         avatar_url: "https://avatars2.githubusercontent.com/u/21048049?s=400&u=235dd059e0607a85e18522b6c906fef968dac12d&v=4",
         name: "Leonardo Jesus",
         role: "Aluno - Rocketseat",
-        description: 'Futuro programador full-stack. Servidor no <a href="http://www.tre-sp.jus.br" target="_blank">TRE-SP</a>',
+        description: 'Futuro programador full-stack.',
         links: [
             { name: "Github", url: "https://github.com/leo-jesus/" },
             { name: "Twitter", url: "https://www.twitter.com/llxdgb1" },
@@ -47,6 +47,6 @@ server.get("/video", (req, res) => {
     res.send(id)
 
 })
-server.listen(5000, () => {
-    console.log("server is running")
+server.listen(7000, () => {
+    console.log("server is running at 7000")
 }) 
